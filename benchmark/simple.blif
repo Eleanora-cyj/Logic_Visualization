@@ -1,0 +1,10 @@
+.model simple
+.inputs a b c d
+.outputs e
+.names a b node1
+11 1
+.names node1 c node2
+11 1
+.names node2 d e
+11 1
+.end
