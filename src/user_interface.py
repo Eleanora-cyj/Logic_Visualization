@@ -12,9 +12,9 @@ class UI(object):
             - network graphbox
         '''
         pygame.init()
-        root = tk.Tk()
-        screen_width = root.winfo_screenwidth()
-        screen_height = root.winfo_screenheight()
+        infoObject = pygame.display.Info()
+        screen_width = infoObject.current_w
+        screen_height = infoObject.current_h
         self.size = screen_width, screen_height
         self.version = '1.0'
         self.screen = pygame.display.set_mode(

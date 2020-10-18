@@ -40,9 +40,9 @@ class Edge(object):
 class Graph_box:
     def __init__(self, screen):
         # get the window DPI and set the size of box
-        root = tk.Tk()
-        screen_width = root.winfo_screenwidth()
-        screen_height = root.winfo_screenheight()
+        infoObject = pygame.display.Info()
+        screen_width = infoObject.current_w
+        screen_height = infoObject.current_h
         self.width, self.height = int(screen_width*0.4), int(screen_height*0.6)
         self.position = self.left, self.top = int(screen_width*0.05), int(screen_height*0.05)
         self.screen = screen

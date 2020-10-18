@@ -3,9 +3,9 @@ from src.global_definition import *
 class Text_box:
     def __init__(self, screen):
         # get the window DPI and set the size of box
-        root = tk.Tk()
-        screen_width = root.winfo_screenwidth()
-        screen_height = root.winfo_screenheight()
+        infoObject = pygame.display.Info()
+        screen_width = infoObject.current_w
+        screen_height = infoObject.current_h
         self.width, self.height = int(screen_width*0.9), int(screen_height*0.2)
         self.position = self.left, self.top = int(screen_width*0.05), int(screen_height*0.70)
         self.max_line = 10
